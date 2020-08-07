@@ -1,0 +1,36 @@
+---
+title: "quantiles_table"
+author: "Alex Pate"
+date: "29/07/2019"
+output: word_document
+---
+
+```{r, echo=FALSE}
+### SET ROOT DIRECTORY
+
+### SET ROOT DIRECTORY
+
+load("R_out_C4/quantiles_table.RData")
+
+library(knitr)
+
+print("female")
+kable(quantiles.C.table.female)
+print("male")
+kable(quantiles.C.table.male)
+
+print("female")
+kable(quantiles.calib.table.female)
+print("male")
+kable(quantiles.calib.table.male)
+
+print("female MAPE")
+kable(quantiles.MAPE.table.female)
+print("male MAPE")
+kable(quantiles.MAPE.table.male)
+
+print("female NB")
+kable(quantiles.NB.table.female)
+print("male NB")
+kable(quantiles.NB.table.male)
+```
